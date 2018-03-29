@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ListaPage page.
+ * Generated class for the ResultadoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-lista',
-  templateUrl: 'lista.html',
+  selector: 'page-resultado',
+  templateUrl: 'resultado.html',
 })
-export class ListaPage {
+export class ResultadoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListaPage');
+    console.log('ionViewDidLoad ResultadoPage');
   }
 
 }
