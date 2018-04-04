@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProvedorProvider } from '../providers/provedor/provedor';
 import {HttpClientModule} from "@angular/common/http";
+import { MoodleProvider } from '../providers/moodle/moodle';
 import Livro = livro.Livro;
 
 @NgModule({
@@ -33,7 +34,8 @@ import Livro = livro.Livro;
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProvedorProvider
+    ProvedorProvider,
+    MoodleProvider
   ]
 })
 export class AppModule {}

@@ -12,7 +12,7 @@ export class ProvedorProvider {
 
   urlApi = 'http://localhost:3000/livros/'
   constructor(public http: HttpClient) {
-    console.log('Hello ProvedorProvider Provider');
+
   }
 
   exibelivrosPorAutor(x) {
@@ -22,5 +22,6 @@ export class ProvedorProvider {
   exibeLivrosPorNome(x){
     return this.http.get(this.urlApi + '?title_like='+x);
   }
+
 
 }

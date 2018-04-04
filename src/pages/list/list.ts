@@ -23,15 +23,11 @@ export class ListPage {
 
     this.selectedItem= navParams.get('buscaAutor');
 
-    this.api.exibeLivrosPorNome(this.selectedItem).subscribe( ret => {
+    this.api.exibelivrosPorAutor(this.selectedItem).subscribe( ret => {
       this.livros = ret;
     })
-
-
   }
-  agoraFiltraPeloAutorBeleza(){
 
-  }
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
     this.navCtrl.push(ListPage, {
