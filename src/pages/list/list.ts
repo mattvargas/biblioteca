@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {ProvedorProvider} from "../../providers/provedor/provedor";
 
 @Component({
   selector: 'page-list',
@@ -9,27 +10,26 @@ export class ListPage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
+  livros: any; // colocar tipo depois
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public api: ProvedorProvider) {
+    // If we navigated to this page, we will have an item available as a nav param
+    this.selectedItem = navParams.get('buscaLivro');
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // Se navegarmos para esta página, teremos um item disponível como um parâmetro nav
-    this.selectedItem = navParams.get('item');
+    this.api.exibeLivrosPorNome(this.selectedItem).subscribe( ret => {
+      this.livros = ret;
+      })
 
-    // Vamos preencher esta página com algum conteúdo de preenchimento para os funzinhos
-    this.icons = ['build', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+    this.selectedItem= navParams.get('buscaAutor');
 
-    this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+    this.api.exibelivrosPorAutor(this.selectedItem).subscribe( ret => {
+      this.livros = ret;
+    })
   }
 
   itemTapped(event, item) {
-    // Isso mesmo, estamos empurrando para nós mesmos!!
+    // That's right, we're pushing to ourselves!
     this.navCtrl.push(ListPage, {
       item: item
     });

@@ -5,20 +5,24 @@
     </button>
     <ion-title>Instituto Infnet</ion-title>
   </ion-navbar>
+  <button ion-button search (click)="Logar()">Login</button>
 </ion-header>
+
 
 <ion-content padding>
   <h3>Biblioteca Online</h3>
 
  <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg96GIZY8n87EaqVZFs7j15cqVVM7rxgGrYu_WG6cm_-sUKNVPKg" id="logo"></div>
   <p>
-    Caro Aluno,
+    Caro Aluno INFNET,
   </p>
   <p>
     A partir de agora você pode consultar de forma online o nosso acervo e solicitar empréstimo de livros.
   </p>
-<ion-searchbar>Pesquise seu livro aqui</ion-searchbar>
 
-  <button ion-button search>Buscar</button>
+  <p>Consultar por Nome do Livro </p>
+  <ion-searchbar [(ngModel)]="buscaLivro" >Pesquise seu livro </ion-searchbar>
+  <button ion-button search (click)="buscarLivros()">Buscar Livro </button>
+  <button ion-button search (click)="buscarAutor()">Buscar Autor</button>
 
 </ion-content>

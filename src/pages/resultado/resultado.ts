@@ -16,17 +16,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ResultadoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
-    this.items = []
-    this.items.push ({
-      title: 'Item'
-      note: 'This is item #'
-    })
-
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ResultadoPage');
-  }
+
+
 
 }
