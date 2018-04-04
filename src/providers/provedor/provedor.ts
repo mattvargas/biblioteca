@@ -15,6 +15,6 @@ export class ProvedorProvider {
   }
 
   exibelivros() {
-    return this.http ('ProvedorProvider Provider')
+    return this.http ('ProvedorProvider Provider');
   }
 }

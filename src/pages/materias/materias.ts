@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {HttpClient} from "@angular/common/http";
 
 /**
- * Generated class for the ResultadoPage page.
+ * Generated class for the MateriasPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,23 +11,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-resultado',
-  templateUrl: 'resultado.html',
+  selector: 'page-materias',
+  templateUrl: 'materias.html',
 })
-export class ResultadoPage {
+export class MateriasPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
-    this.items = []
-    this.items.push ({
-      title: 'Item'
-      note: 'This is item #'
-    })
-
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ResultadoPage');
+    console.log('ionViewDidLoad MateriasPage');
   }
-
+  listarMaterias() {
+    this.listarMaterias( HttpClient:)
+  }
 }
