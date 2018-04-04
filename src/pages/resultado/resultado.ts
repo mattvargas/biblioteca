@@ -18,8 +18,7 @@ export class ResultadoPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ResultadoPage');
-  }
+
+
 
 }

@@ -10,11 +10,17 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ProvedorProvider {
 
+  urlApi = 'http://localhost:3000/livros/'
   constructor(public http: HttpClient) {
     console.log('Hello ProvedorProvider Provider');
   }
 
-  exibelivros() {
-    return this.http ('ProvedorProvider Provider')
+  exibelivrosPorAutor(x) {
+    return this.http.get(this.urlApi + '?author_like='+x);
+
   }
+  exibeLivrosPorNome(x){
+    return this.http.get(this.urlApi + '?title_like='+x);
+  }
+
 }

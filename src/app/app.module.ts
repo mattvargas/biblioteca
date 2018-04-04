@@ -9,6 +9,8 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProvedorProvider } from '../providers/provedor/provedor';
+import {HttpClientModule} from "@angular/common/http";
+import Livro = livro.Livro;
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { ProvedorProvider } from '../providers/provedor/provedor';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
