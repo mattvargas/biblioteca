@@ -3,18 +3,20 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MoodleService {
-    urlAPI = 'https://lms.infnet.edu.br/moodle/webservice/rest/server' +
-      '.php?wstoken=437d0379b8024f05063107140d460669&moodlewsrestformat' +
-      '=json&wsfunction=core_webservice_get_site_info';
+    urlAPI = ' https://lms.infnet.edu.br/moodle/login/token.php';
 
   constructor(public web : HttpClient ) { }
 
-      executaLogin(usuario, senha){
-         return this.web.post(this.urlAPI + '/login',{
-           email: usuario,
-           password:senha,
-    });
-  }
+      executaLogin(usuario, senha) {
+        let formulario = new FormData();
+        formulario.append('username', 'usuario',);
+        formulario.append('password', 'senha');
+        formulario.append('service', 'moodle_mobile_app')
+
+          return this.web.post(this.urlAPI, formulario);
+
+
+      }
       retornaListaUsuarios(){
           return this.web.get(this.urlAPI + '/login' , {
 

@@ -1,3 +1,17 @@
-<ion-navbar>
-<ion-buttons (click)="goToHomePage()"> Back </ion-buttons>
-</ion-navbar>
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input [(ngModel)]="usuario" type="text" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input [(ngModel)]="senha" type="password" value=""></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div padding>
+  <button primary block  (click)="login()">Sign In</button>
+</div>

@@ -19,7 +19,11 @@ export class MateriasPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+<<<<<<< HEAD
   ionViewDidLoad() {
     console.log('ionViewDidLoad MateriasPage');
   }
+=======
+
+>>>>>>> 5ad4d774fd58f52b7f7fe6d973cd411fb865cc16
 }
