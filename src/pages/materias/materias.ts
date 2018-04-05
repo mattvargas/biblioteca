@@ -22,7 +22,4 @@ export class MateriasPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MateriasPage');
   }
-  listarMaterias() {
-    this.listarMaterias( HttpClient:)
-  }
 }
