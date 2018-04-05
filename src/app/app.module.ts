@@ -9,16 +9,12 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProvedorProvider } from '../providers/provedor/provedor';
-import {HttpClientModule} from "@angular/common/http";
-<<<<<<< HEAD
-=======
 import { MoodleService } from "../providers/moodle/moodle";
 import {LoginPage} from "../pages/login/login";
 import {DashboardPage} from "../pages/dashboard/dashboard";
 
 import {HttpClientModule} from "@angular/common/http";
-import { MoodleProvider } from '../providers/moodle/moodle';
->>>>>>> 8f3e8679a6cdf1416f7d558cee80586670dafef3
+
 import Livro = livro.Livro;
 
 @NgModule({
@@ -49,10 +45,8 @@ import Livro = livro.Livro;
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProvedorProvider,
-<<<<<<< HEAD
-=======
     MoodleService,
->>>>>>> 8f3e8679a6cdf1416f7d558cee80586670dafef3
+
   ]
 })
 export class AppModule {}
