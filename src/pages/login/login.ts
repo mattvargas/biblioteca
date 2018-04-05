@@ -27,11 +27,13 @@ export class LoginPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public service: MoodleService){}
+              public service: MoodleService, public http : HttpClient) {
 
-  goToHomePage() {
-      this.navCtrl.push(HomePage);
   }
+  logarApi( ){
+    this.service.executaLogin(this.usuario,this.senha).subscribe(data=>this.service.salvaToken(JSON.stringify(data)));
+    }
+
 
 }
 
