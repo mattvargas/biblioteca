@@ -1,36 +1,38 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {ListPage} from "../list/list";
-import { Form } from '@angular/forms';
+import {LoginPage} from "../login/login";
+import{MoodleService} from "../../providers/moodle/moodle";
 
-
-
+@IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers: [MoodleService]
 })
 export class HomePage {
 
 
   buscaLivro: any;
   buscaAutor: any;
-
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
+  irLoginPage(){
+    this.navCtrl.push(LoginPage);
+  }
   buscarLivros() {
     this.navCtrl.push(ListPage, {
       buscarLivro: this.buscaLivro
     });
   }
 
-    buscarAutor(){
+   buscarAutor(){
       this.navCtrl.push(ListPage, {
         buscarAutor: this.buscarAutor
+
       });
 
     }
-
-
 }

@@ -10,14 +10,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProvedorProvider } from '../providers/provedor/provedor';
 import {HttpClientModule} from "@angular/common/http";
-import { MoodleProvider } from '../providers/moodle/moodle';
-import Livro = livro.Livro;
+import { MoodleService } from "../providers/moodle/moodle";
+import {LoginPage} from "../pages/login/login";
+import {DashboardPage} from "../pages/dashboard/dashboard";
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    DashboardPage,
+
   ],
   imports: [
     BrowserModule,
@@ -28,14 +33,17 @@ import Livro = livro.Livro;
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    DashboardPage,
+    LoginPage,
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProvedorProvider,
-    MoodleProvider
+    MoodleService,
   ]
 })
 export class AppModule {}

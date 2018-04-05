@@ -10,11 +10,11 @@
 <ion-content>
   <h1>Busca por {{selectedItem}}</h1>
   <ion-list>
-    <button ion-item *ngFor="let item of livros" (click)="itemTapped($event, item)">
+    <button ion-item *ngFor="let item of books" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.imageLink" item-start></ion-icon>
       {{item.title}}
       <div class="item-note" item-end>
-        {{item.title}} - de <a (click)="agoraFiltraPeloAutorBeleza()"><i>{{item.author}}</i></a>
+        {{item.title}} - de <a (click)="agoraFiltraPeloAutorBele()"><i>{{item.author}}</i></a>
       </div>
     </button>
   </ion-list>
