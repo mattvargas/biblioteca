@@ -14,6 +14,9 @@ import { MoodleService } from "../providers/moodle/moodle";
 import {LoginPage} from "../pages/login/login";
 import {DashboardPage} from "../pages/dashboard/dashboard";
 
+import {HttpClientModule} from "@angular/common/http";
+import { MoodleProvider } from '../providers/moodle/moodle';
+import Livro = livro.Livro;
 
 @NgModule({
   declarations: [
