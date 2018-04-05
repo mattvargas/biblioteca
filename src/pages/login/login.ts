@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ListPage} from "../list/list";
 import {HttpClient} from "@angular/common/http";
+import {MoodleService} from "../../providers/moodle/moodle";
+import {DashboardPage} from "../dashboard/dashboard";
+import {HomePage} from "../home/home";
 
-/**
+/*
  * Generated class for the LoginPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
@@ -14,11 +17,26 @@ import {HttpClient} from "@angular/common/http";
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
+  providers: [MoodleService],
+
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+    usuario:any
+    senha : any
 
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public service: MoodleService){}
+
+  goToHomePage() {
+      this.navCtrl.push(HomePage);
   }
+
+}
+
+
+
+
 
 

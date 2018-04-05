@@ -11,9 +11,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-resultado',
-  templateUrl: 'resultado.html',
+  templateUrl: 'dashboard.html',
 })
-export class ResultadoPage {
+export class DashboardPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
