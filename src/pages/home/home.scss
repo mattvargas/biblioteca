@@ -1,22 +1,21 @@
-page-home {
+page-login {
 
+  text-align: center;
+
+
+}
+
+ion-navbar {
+
+  text-align: left;
+
+}
   #logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
-  }
 
-  .navbar { color: #488aff;
-  }
-
-  ion-content {
-    text-align: center;
-    margin-top: 5em;
-  }
-  ion-icon{
-    font-weight: 100px
-  ;
   }
 
   .botaologin {
@@ -25,4 +24,4 @@ page-home {
     margin-right: auto;
   }
 
-}
+
