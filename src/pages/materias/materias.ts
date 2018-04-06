@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {HttpClient} from "@angular/common/http";
 
 /**
  * Generated class for the MateriasPage page.
@@ -18,4 +17,9 @@ export class MateriasPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad MateriasPage');
+  }
+
 }
