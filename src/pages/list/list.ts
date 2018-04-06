@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {ProvedorProvider} from "../../providers/provedor/provedor";
-import Livro = livro.Livro;
+
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
