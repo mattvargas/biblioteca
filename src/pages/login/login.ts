@@ -6,13 +6,6 @@ import {MoodleService} from "../../providers/moodle/moodle";
 import {DashboardPage} from "../dashboard/dashboard";
 import {HomePage} from "../home/home";
 
-/*
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -31,10 +24,14 @@ export class LoginPage {
 
   }
   logarApi( ){
-    this.service.executaLogin(this.usuario,this.senha).subscribe(data=>this.service.salvaToken(JSON.stringify(data)));
+    this.service.executaLogin(this.usuario,this.senha).subscribe(retornoOk => {
+      this.service.salvaToken(JSON.stringify(retornoOk));
+      this.navCtrl.push(DashboardPage);
+    },erro => {
+      console.log(' deu merda', erro)
+    });
+
     }
-
-
 }
 
 

@@ -15,12 +15,12 @@ export class ProvedorProvider {
 
   }
 
-  exibelivrosPorAutor(x) {
-    return this.http.get(this.urlApi + '?author_like='+x);
+  exibelivrosPorAutor(selectedItem) {
+    return this.http.get(this.urlApi + '?author_like='+selectedItem);
 
   }
-  exibeLivrosPorNome(x){
-    return this.http.get(this.urlApi + '?title_like='+x);
+  exibeLivrosPorNome(selectedeItem){
+    return this.http.get(this.urlApi + '?title_like='+selectedeItem);
   }
 
 

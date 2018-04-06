@@ -6,6 +6,7 @@ import {ListPage} from "./list";
 @NgModule({
   declarations: [
     ListPage,
+
   ],
   imports: [
     IonicPageModule.forChild(ListPage),

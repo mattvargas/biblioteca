@@ -7,19 +7,19 @@ import Livro = livro.Livro;
   templateUrl: 'list.html'
 })
 export class ListPage {
-  selectedItem: any;
-  icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
-  books: any ;//  Livro ; // colocar tipo depois
-  constructor(public navCtrl: NavController,
-              public navParams: NavParams,
-              public api: ProvedorProvider) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('buscaLivro');
+    selectedItem: any;
+    books: any ;//  Livro ; // colocar tipo depois
 
-    this.api.exibeLivrosPorNome(this.selectedItem).subscribe(ret => {
-      this.books = ret;
-    });
+  constructor(public navCtrl: NavController,
+                    public navParams: NavParams,
+                      public api: ProvedorProvider) {
+
+    this.selectedItem = navParams.get('buscarLivro');
+
+      this.api.exibeLivrosPorNome(this.selectedItem).subscribe(ret => {
+        this.books = ret;
+      });
+
 
     this.selectedItem= navParams.get('buscaAutor');
 

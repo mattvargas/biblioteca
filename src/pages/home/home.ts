@@ -15,9 +15,7 @@ export class HomePage {
 
   buscaLivro: any;
   buscaAutor: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   irLoginPage(){
     this.navCtrl.push(LoginPage);
