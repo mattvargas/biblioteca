@@ -20,14 +20,18 @@
     Caro Aluno,
   </p>
   <p>
-    A partir de agora você pode consultar de forma online o nosso acervo antes de solicitar pessoalmente o empréstimo de livros.
+    Consulte de forma online o nosso acervo.
   </p>
-
-  <p>Consultar por Nome do Livro </p>
-  <ion-searchbar [(ngModel)]="buscaLivro" >Pesquise seu livro </ion-searchbar>
+  <ion-searchbar id="buscar" [(ngModel)]="buscaLivro"></ion-searchbar>
   <div>
     <button id="button" ion-button search (click)="buscarLivros()">Buscar Livro </button>
     <button id="button" ion-button search (click)="buscarAutor()">Buscar Autor</button>
   </div>
+
+  <ion-footer>
+
+    <p>Copyright 2018 - Matheus André De Lima Vargas & Samuel Pereira Soares</p>
+
+  </ion-footer>
 
 </ion-content>
