@@ -34,6 +34,10 @@ export class LoginPage {
     this.service.executaLogin(this.usuario,this.senha).subscribe(data=>this.service.salvaToken(JSON.stringify(data)));
     }
 
+  voltarPage(){
+    this.navCtrl.pop();
+  }
+
 
 }
 

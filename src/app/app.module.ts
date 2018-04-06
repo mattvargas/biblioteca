@@ -15,8 +15,6 @@ import {DashboardPage} from "../pages/dashboard/dashboard";
 
 import {HttpClientModule} from "@angular/common/http";
 
-import Livro = livro.Livro;
-
 @NgModule({
   declarations: [
     MyApp,
