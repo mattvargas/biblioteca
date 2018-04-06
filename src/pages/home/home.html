@@ -4,9 +4,12 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Instituto Infnet</ion-title>
-    <button ion-button (click)="irLoginPage()">Entrar</button>
+    <ion-buttons end>
+      <button ion-button id="entrar" (click)="irLoginPage()">
+        Entrar
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 <ion-content padding>
   <h3>Biblioteca Online</h3>
@@ -17,12 +20,14 @@
     Caro Aluno,
   </p>
   <p>
-    A partir de agora você pode consultar de forma online o nosso acervo e antes de solicitar pessoalmente o empréstimo de livros.
+    A partir de agora você pode consultar de forma online o nosso acervo antes de solicitar pessoalmente o empréstimo de livros.
   </p>
 
   <p>Consultar por Nome do Livro </p>
   <ion-searchbar [(ngModel)]="buscaLivro" >Pesquise seu livro </ion-searchbar>
-  <button ion-button search (click)="buscarLivros()">Buscar Livro </button>
-  <button ion-button search (click)="buscarAutor()">Buscar Autor</button>
+  <div>
+    <button id="button" ion-button search (click)="buscarLivros()">Buscar Livro </button>
+    <button id="button" ion-button search (click)="buscarAutor()">Buscar Autor</button>
+  </div>
 
 </ion-content>
