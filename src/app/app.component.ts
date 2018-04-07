@@ -41,16 +41,6 @@ export class MyApp {
     if (this.service.verificarToken())
       this.nav.push(this.rootPage);
 
-    if (condicao) {
-
-      this.navPush(HomePage);
-
-    }
-
-      else {
-
-      this.navPush(LoginPage);
-    }
 
 
   }
