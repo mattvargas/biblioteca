@@ -4,7 +4,7 @@ import {ListPage} from "../list/list";
 import {HttpClient} from "@angular/common/http";
 import {MoodleService} from "../../providers/moodle/moodle";
 import {DashboardPage} from "../dashboard/dashboard";
-import {HomePage} from "../home/home";
+import {AsyncLocalStorage} from "angular-async-local-storage";
 
 @IonicPage()
 @Component({
@@ -20,18 +20,21 @@ export class LoginPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public service: MoodleService, public http : HttpClient) {
+              public service: MoodleService, public http : HttpClient,) {
 
   }
   logarApi( ){
     this.service.executaLogin(this.usuario,this.senha).subscribe(retornoOk => {
       this.service.salvaToken(JSON.stringify(retornoOk));
+
+
       this.navCtrl.push(DashboardPage);
     },erro => {
       console.log(' deu merda', erro)
-    });
 
+    });
     }
+
 }
 
 
