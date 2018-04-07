@@ -2,13 +2,14 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { MoodleService} from "../providers/moodle/moodle";
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {LoginPage} from "../pages/login/login";
 import {DashboardPage} from "../pages/dashboard/dashboard";
 import {BibliotecaPage} from "../pages/biblioteca/biblioteca";
 import {MateriasPage} from "../pages/materias/materias";
+import {_if} from "rxjs/observable/if";
 
 
 @Component({
@@ -17,22 +18,43 @@ import {MateriasPage} from "../pages/materias/materias";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = DashboardPage;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform,
+              public statusBar: StatusBar,
+              public splashScreen: SplashScreen,
+               public service: MoodleService) {
+
+
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Biblioteca', component: HomePage } ,
-      { title: 'Login', component: LoginPage } ,
-      { title: 'Área do Aluno', component: DashboardPage } ,
-      { title: 'Matérias', component: MateriasPage } ,
-      ]
+      {title: 'Biblioteca', component: HomePage},
+      {title: 'Login', component: LoginPage},
+      {title: 'Área do Aluno', component: DashboardPage},
+      {title: 'Matérias', component: MateriasPage},
+    ]
+
+    if (this.service.verificarToken())
+      this.nav.push(this.rootPage);
+
+    if (condicao) {
+
+      this.navPush(HomePage);
+
+    }
+
+      else {
+
+      this.navPush(LoginPage);
+    }
+
 
   }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
