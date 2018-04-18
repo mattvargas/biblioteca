@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ProvedorProvider {
 
-  urlApi = 'http://localhost:3000/livros/'
+  urlApi = ''
   constructor(public http: HttpClient) {
 
   }

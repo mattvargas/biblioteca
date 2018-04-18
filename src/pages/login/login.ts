@@ -23,25 +23,6 @@ export class LoginPage {
               public service: MoodleService, public http : HttpClient,) {
 
   }
-  logarApi( ){
-    this.service.executaLogin(this.usuario,this.senha).subscribe(retornoOk => {
-      this.service.salvaToken(JSON.stringify(retornoOk));
-
-
-<<<<<<< HEAD
-  voltarPage(){
-    this.navCtrl.pop();
-  }
-
-=======
-      this.navCtrl.push(DashboardPage);
-    },erro => {
-      console.log(' deu merda', erro)
-
-    });
-    }
->>>>>>> 3fdaf82dc9c3afbb1c87cc198636241bbdd9d61e
-
 }
 
 
