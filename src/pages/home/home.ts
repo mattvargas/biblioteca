@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {ListPage} from "../list/list";
-import {LoginPage} from "../login/login";
 
 @IonicPage()
 @Component({
@@ -15,9 +14,6 @@ export class HomePage {
   buscaAutor: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  irLoginPage(){
-    this.navCtrl.push(LoginPage);
-  }
   buscarLivros() {
     this.navCtrl.push(ListPage, {
       buscarLivro: this.buscaLivro

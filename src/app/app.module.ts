@@ -7,7 +7,6 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProvedorProvider } from '../providers/provedor/provedor';
-import {LoginPage} from "../pages/login/login";
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
@@ -15,7 +14,6 @@ import {HttpClientModule} from "@angular/common/http";
     MyApp,
     HomePage,
     ListPage,
-    LoginPage,
 
   ],
   imports: [
@@ -28,7 +26,6 @@ import {HttpClientModule} from "@angular/common/http";
     MyApp,
     HomePage,
     ListPage,
-    LoginPage,
 
   ],
   providers: [
