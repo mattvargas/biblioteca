@@ -1,7 +1,5 @@
 page-login {
 
-  align-items: center;
-
 }
 
   h1 {
@@ -13,26 +11,20 @@ page-login {
     text-align: center;
   }
 
-  ion-navbar {
-    text-align: left;
+#img {
+  align-items: center;
+}
 
-  }
-
-  #logo {
-    padding: 1em;
-
-  }
-
-  #button {
-    padding: 1em;
-    width: 35%;
-    height: 35%;
-    display: inline-block;
-    margin-top: 0.5em;
-    margin-right: 7%;
-    margin-left: 7%;
-    text-align: center;
-  }
+#button {
+  padding: 1em;
+  width: 35%;
+  height: 35%;
+  display: inline-block;
+  margin-top: 0.5em;
+  margin-right: 7%;
+  margin-left: 7%;
+  text-align: center;
+}
 
 #entrar {
   margin-right: 1em;
