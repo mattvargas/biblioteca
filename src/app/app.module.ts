@@ -7,7 +7,6 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProvedorProvider } from '../providers/provedor/provedor';
-import { MoodleService } from "../providers/moodle/moodle";
 import {LoginPage} from "../pages/login/login";
 import {HttpClientModule} from "@angular/common/http";
 
@@ -37,7 +36,6 @@ import {HttpClientModule} from "@angular/common/http";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProvedorProvider,
-    MoodleService,
 
   ]
 })

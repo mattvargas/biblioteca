@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {ListPage} from "../list/list";
 import {LoginPage} from "../login/login";
-import{MoodleService} from "../../providers/moodle/moodle";
 
 @IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [MoodleService]
 })
 export class HomePage {
 

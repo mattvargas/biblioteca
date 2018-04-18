@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { MoodleService} from "../providers/moodle/moodle";
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
@@ -21,7 +20,7 @@ export class MyApp {
   constructor(public platform: Platform,
               public statusBar: StatusBar,
               public splashScreen: SplashScreen,
-              public service: MoodleService) {
+              ) {
 
 
     this.initializeApp();
@@ -30,12 +29,6 @@ export class MyApp {
     this.pages = [
       {title: 'Biblioteca', component: HomePage},
     ]
-
-    if (this.service.verificarToken()){
-      this.nav.push(this.rootPage);
-
-      this.navPush(HomePage);
-    }
 
 
   }
