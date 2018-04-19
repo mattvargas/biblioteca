@@ -8,6 +8,8 @@ import {ResultadoPage } from "../resultado/resultado";
   selector: 'page-home',
   templateUrl: 'home.html',
 })
+
+
 export class HomePage {
 
 

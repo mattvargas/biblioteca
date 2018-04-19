@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, NgModules } from 'ionic-angular';
 import {ConsumoapiService} from "../../providers/consumoapi/consumoapi";
 import { HttpClient } from '@angular/common/http';
-import { Books } from '../..books.json';
-
+import { Books } from '../books';
 
 /**
  * Generated class for the ResultadoPage page.
@@ -31,7 +30,7 @@ export class ResultadoPage {
     private web: HttpClient ) { }
 
   ngOnInit() {
-    this.web.Books().subscribe(ret => {
+    this.web.exibeLivros().subscribe(ret => {
       this.dadosExibidos = < Books []>ret;
     });
   }
