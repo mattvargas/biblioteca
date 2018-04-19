@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Providers, ConsumoAPI } from 'json-server' ;
+import {ConsumoapiService} from "../../providers/consumoapi/consumoapi";
+import { HttpClient } from '@angular/common/http';
+import { Books } from '../..books.json';
+
 
 /**
  * Generated class for the ResultadoPage page.
@@ -16,11 +19,25 @@ import { Providers, ConsumoAPI } from 'json-server' ;
 })
 export class ResultadoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResultadoPage');
+  }
+
+
+  dadosExibidos: Books [];
+
+  constructor(
+    private web: HttpClient ) { }
+
+  ngOnInit() {
+    this.web.Books().subscribe(ret => {
+      this.dadosExibidos = < Books []>ret;
+    });
+  }
+
+  exibeDetalhes() {
+    this.rota.navigate(['/detalhes/' + detalhe.id])
   }
 
 }

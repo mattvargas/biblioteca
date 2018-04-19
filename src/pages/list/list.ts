@@ -1,37 +1,26 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import {ProvedorProvider} from "../../providers/provedor/provedor";
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
+/**
+ * Generated class for the ResultadoPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
   selector: 'page-list',
-  templateUrl: 'list.html'
+  templateUrl: 'list.html',
 })
 export class ListPage {
-    selectedItem: any;
-    books: any ;//  Livro ; // colocar tipo depois
 
-  constructor(public navCtrl: NavController,
-                    public navParams: NavParams,
-                      public api: ProvedorProvider) {
-
-    this.selectedItem = navParams.get('buscarLivro');
-
-      this.api.exibeLivrosPorNome(this.selectedItem).subscribe(ret => {
-        this.books = ret;
-      });
-
-
-    this.selectedItem= navParams.get('buscaAutor');
-
-    this.api.exibelivrosPorAutor(this.selectedItem).subscribe( ret => {
-      this.books.author = ret;
-    })
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ListPage, {
-      item: item
-    });
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ListPage');
   }
+
 }
