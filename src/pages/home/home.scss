@@ -2,49 +2,35 @@ page-login {
 
 }
 
-  h1 {
-    text-align: center;
-    padding: 1em;
-    color: red;
-  }
-
-  p {
-    text-align: center;
-  }
-
-#img {
-  align-items: center;
+p {
+  text-align: center;
 }
-
-#button {
-  padding: 1em;
-  width: 35%;
-  height: 35%;
-  display: inline-block;
-  margin-top: 0.5em;
-  margin-right: 7%;
-  margin-left: 7%;
+h1 {
   text-align: center;
 }
 
-#entrar {
-  margin-right: 1em;
-  display: inline-block;
-}
-
-#buscar {
-  padding: 1.2em;
-
-}
-
-#formulario {
+#logo {
   align-items: center;
-
-  margin-left: 35%;
-  margin-right: 35%;
+  display: block;
   width: auto;
   height: auto;
-  display: block;
-  border-color: blue;
 }
+
+  #button {
+    padding: 1em;
+    width: 35%;
+    height: 35%;
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-right: 7%;
+    margin-left: 7%;
+    text-align: center;
+  }
+
+  #buscar {
+    padding: 1.2em;
+
+  }
+
+
 
