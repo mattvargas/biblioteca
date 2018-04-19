@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, NgModules } from 'ionic-angular';
-import {ConsumoapiService} from "../../providers/consumoapi/consumoapi";
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { Books } from '../books';
 
@@ -30,7 +29,7 @@ export class ResultadoPage {
     private web: HttpClient ) { }
 
   ngOnInit() {
-    this.web.exibeLivros().subscribe(ret => {
+    this.web.listaLivros().subscribe(ret => {
       this.dadosExibidos = < Books []>ret;
     });
   }
