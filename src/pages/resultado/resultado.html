@@ -7,12 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>resultado</ion-title>
+    <ion-title>Resultado da Busca</ion-title>
   </ion-navbar>
 
 </ion-header>
-
-
+<ul>
+  <li *ngFor="let book of dadosExibidos">
+    <img src="{{ book.imagem }}" width="50" height="50"
+         (click)="exibeDetalhes(book)" />
+    <b>{{ book.nome}}</b>
+  </li>
+</ul>
 <ion-content padding>
 
 </ion-content>

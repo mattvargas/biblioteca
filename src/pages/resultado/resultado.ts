@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Providers, ConsumoAPI } from 'json-server' ;
 
 /**
  * Generated class for the ResultadoPage page.

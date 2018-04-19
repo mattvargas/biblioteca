@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {ListPage} from "../list/list";
+import {ResultadoPage} from "../resultado/resultado";
 
 @IonicPage()
 @Component({
@@ -12,19 +13,21 @@ export class HomePage {
 
   buscaLivro: any;
   buscaAutor: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
   buscarLivros() {
-    this.navCtrl.push(ListPage, {
+    this.navCtrl.push(ResultadoPage, {
       buscarLivro: this.buscaLivro
     });
   }
 
-   buscarAutor(){
-      this.navCtrl.push(ListPage, {
-        buscarAutor: this.buscarAutor
+  buscarAutor() {
+    this.navCtrl.push(ResultadoPage, {
+      buscarAutor: this.buscarAutor
 
-      });
+    });
 
-    }
+  }
 }
