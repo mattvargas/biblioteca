@@ -15,4 +15,10 @@
 
 <ion-content padding>
 
+  <ul *ngIf="ListarLivros">
+    <li *ngFor="let books of ListarLivros.books">
+      <b>{{ books.title }}</b>
+    </li>
+  </ul>
+
 </ion-content>

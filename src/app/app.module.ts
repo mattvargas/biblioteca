@@ -8,6 +8,7 @@ import { ListadelivrosPage} from "../pages/listadelivros/listadelivros";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {HttpClientModule} from "@angular/common/http";
+import { ConsumoapiProvider } from '../providers/consumoapi/consumoapi';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {HttpClientModule} from "@angular/common/http";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConsumoapiProvider,
 
 
   ]

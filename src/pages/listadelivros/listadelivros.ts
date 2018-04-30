@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HttpClient } from "@angular/common/http";
+import { ConsumoapiProvider} from "../../providers/consumoapi/consumoapi";
 
 /**
  * Generated class for the ListadelivrosPage page.
@@ -15,11 +17,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ListadelivrosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ListarLivros: any
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public APILivros:ConsumoapiProvider) {
+    this.APILivros.listarLivros().subscribe(retorno =>{
+      this.ListarLivros=retorno;
+    })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListadelivrosPage');
   }
+
 
 }
