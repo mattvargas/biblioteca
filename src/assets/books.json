@@ -1,10 +1,35 @@
 {
-  "books": [{
-    "author": "Lógica de Programação",
-    "country": "Nigeria",
-    "language": "English",
-    "pages": 209,
-    "title": "Things Fall Apart"
-  }]
+  "books": [
+
+    {
+    "title": "Introdução à Programação em Python",
+    "subtitle": "Algoritimos e lógica de programação para iniciantes",
+    "author": "Nilo Ney Coutinho Menezes",
+    "country": "Brazil",
+    "language": "Português",
+    "pages": 324
+
+  },
+
+  {
+    "title": "A Bíblia do Marketing Digital",
+    "subtitle": "Tudo que você queria saber sobre marketing e publicidade na internet e não tinha a quem perguntar",
+    "author": "Cláudio Torres",
+    "country": "Brazil",
+    "language": "Português",
+    "pages": 399
+  },
+
+    {
+      "title": "Lógica de Programação",
+      "subtitle": "A construção de algoritimos e estruturas de dados",
+      "author": "André Luiz Villar Forbellone, Henri Frederico Eberspancher",
+      "country": "Brazil",
+      "language": "Português",
+      "pages": 217
+    }
+  ]
+
 }
+
 

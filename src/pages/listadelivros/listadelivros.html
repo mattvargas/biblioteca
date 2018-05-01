@@ -17,7 +17,12 @@
 
   <ul *ngIf="ListarLivros">
     <li *ngFor="let books of ListarLivros.books">
-      <b>{{ books.title }}</b>
+      <p><b>Livro:</b> {{ books.title }}</p>
+      <p><b>Descrição:</b> {{books.subtitle}}</p>
+      <p><b>Autor:</b> {{ books.author }}</p>
+      <p><b>País:</b> {{ books.country }}</p>
+      <p><b>Idioma:</b> {{ books.language }}</p>
+      <p><b>Páginas:</b> {{ books.pages }}</p>
     </li>
   </ul>
 
